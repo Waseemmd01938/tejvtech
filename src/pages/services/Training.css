@@ -1,0 +1,180 @@
+/* Training Page Premium Styles */
+
+.training-page {
+    background: #fff;
+}
+
+.train-hero {
+    padding: 12rem 0 8rem;
+    background: #0f172a;
+    /* Fallback dark color */
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-bg-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9));
+}
+
+.train-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.train-hero h1 {
+    font-size: clamp(3rem, 7vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.train-hero p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3.5rem;
+}
+
+/* Timeline */
+.train-timeline {
+    padding: 8rem 0;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 5rem auto 0;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50%;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 50%;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--home-accent);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 0 0 5px #fff, 0 0 0 8px var(--border-color);
+}
+
+.timeline-content {
+    width: 85%;
+    padding: 2.5rem;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    border-color: var(--home-accent);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Benefits */
+.train-benefits {
+    padding: 8rem 0;
+}
+
+.train-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.train-card {
+    padding: 3.5rem;
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s ease;
+}
+
+.train-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--home-accent);
+    box-shadow: var(--shadow-xl);
+}
+
+/* CTA */
+.train-cta {
+    padding: 8rem 0;
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 30px;
+    }
+
+    .timeline-item {
+        justify-content: flex-start;
+        padding-left: 60px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-left: 60px;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+}

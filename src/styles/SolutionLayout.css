@@ -1,0 +1,101 @@
+/* =========================================
+   SOLUTION LAYOUT - Shared Styles for Custom Pages
+   ========================================= */
+
+.solution-page {
+    background: var(--bg-white);
+    color: var(--text-dark);
+}
+
+/* Dark Theme Variant */
+.solution-page.dark {
+    background: var(--home-dark, #0a0f1c);
+    color: #fff;
+}
+
+/* Shared Hero Styles */
+.solution-hero {
+    padding: 10rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.solution-hero p {
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+}
+
+.dark .solution-hero h1 {
+    color: #fff;
+}
+
+.dark .solution-hero p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Shared Card Styles */
+.solution-card {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.4s ease;
+    border: 1px solid var(--border-color);
+}
+
+.dark .solution-card {
+    background: var(--home-glass);
+    border-color: var(--home-glass-border);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Section Headings */
+.solution-section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.solution-section-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+/* Grid Layouts */
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Animations */
+.animate-up {
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}

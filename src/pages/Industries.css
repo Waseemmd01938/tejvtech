@@ -1,0 +1,217 @@
+/* Industries Page Premium Styles */
+
+.industries-page {
+    background: #fff;
+}
+
+.industries-hero {
+    padding: 12rem 0 8rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.industries-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.industries-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.industries-hero p {
+    font-size: 1.25rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+
+/* Industries Grid */
+.industries-grid-section {
+    padding: 8rem 0;
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 3rem;
+}
+
+.industry-card-premium {
+    position: relative;
+    background: #fff;
+    border-radius: 30px;
+    padding: 4rem 3rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.industry-card-premium:hover {
+    transform: translateY(-15px);
+    border-color: var(--home-accent);
+    box-shadow: var(--shadow-2xl);
+}
+
+.industry-card-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.industry-icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.industry-card-premium h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.industry-card-premium p {
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.industry-solutions-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.solution-pill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-medium);
+    background: #f1f5f9;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+}
+
+.industry-stats-row {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.industry-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.stat-lab {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.industry-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Success Stories */
+.industry-success-section {
+    padding: 8rem 0;
+}
+
+.success-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.success-card-premium {
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.success-card-premium:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.success-image-box {
+    position: relative;
+    aspect-ratio: 16/10;
+}
+
+.success-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.success-industry-tag {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: var(--home-accent);
+    color: #fff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.success-content-box {
+    padding: 2.5rem;
+}
+
+.success-content-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.success-result-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #10b981;
+    font-weight: 700;
+}
+
+.success-cta-box {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+/* CTA */
+.industries-cta-premium {
+    padding: 8rem 0;
+}
+
+@media (max-width: 768px) {
+    .industry-stats-row {
+        gap: 2rem;
+    }
+}

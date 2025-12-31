@@ -1,0 +1,122 @@
+/* Cybersecurity Unique Styles */
+
+.cyber-page {
+    background: #0a0a0a;
+}
+
+.text-gradient-red {
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cyber-hero {
+    position: relative;
+}
+
+.cyber-shield-bg {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cyber-shield-bg::before {
+    content: '🛡️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15rem;
+    opacity: 0.1;
+}
+
+/* Threat Grid */
+.threat-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.cyber-card:hover {
+    border-color: #ef4444;
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.15);
+}
+
+/* Compliance Section */
+.bg-dark-alt {
+    background: #111;
+    padding: 6rem 0;
+}
+
+.compliance-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 4rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.compliance-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.compliance-badge {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.compliance-badge:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+/* CTA Card */
+.cyber-cta-card {
+    background: linear-gradient(135deg, #450a0a 0%, #000 100%);
+    padding: 6rem 2rem;
+    border-radius: 40px;
+    text-align: center;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.cta-icon-large {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+    .compliance-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cyber-shield-bg {
+        width: 300px;
+        height: 300px;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}

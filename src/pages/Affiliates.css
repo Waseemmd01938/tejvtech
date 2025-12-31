@@ -1,0 +1,140 @@
+/* Affiliates Page Premium Styles */
+
+.affiliates-page {
+    background: #fff;
+}
+
+.affiliates-hero {
+    padding: 12rem 0 8rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.affiliates-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.affiliates-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #0f172a;
+}
+
+.affiliates-hero p {
+    font-size: 1.25rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+/* Benefits Grid */
+.benefits-section-premium {
+    padding: 8rem 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.benefit-card-premium {
+    background: #fff;
+    padding: 4rem 3rem;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.benefit-card-premium:hover {
+    transform: translateY(-10px);
+    border-color: var(--home-accent);
+    box-shadow: var(--shadow-xl);
+}
+
+.benefit-icon-box {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.benefit-card-premium h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+}
+
+.benefit-card-premium p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* Partners Grid */
+.partners-section-premium {
+    padding: 8rem 0;
+}
+
+.partners-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.partner-card-premium {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.partner-card-premium:hover {
+    transform: scale(1.05);
+    border-color: var(--home-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.partner-logo-box {
+    width: 60px;
+    height: 60px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--home-accent);
+}
+
+.partner-info h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    color: #0f172a;
+}
+
+.partner-info span {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* CTA */
+.affiliates-cta-premium {
+    padding: 8rem 0;
+}
+
+@media (max-width: 768px) {
+    .partners-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}

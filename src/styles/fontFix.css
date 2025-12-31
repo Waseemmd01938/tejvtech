@@ -1,0 +1,170 @@
+/* Global Font Fix for All Pages */
+* {
+    font-family: var(--font-primary), 'Inter', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading), 'Outfit', sans-serif !important;
+}
+
+/* --- DARK THEMED PAGES (White Text) --- */
+.api-dev-page,
+.devops-page,
+.am-page,
+.mvp-page,
+.portfolio-page,
+.home-container,
+.page-hero {
+    color: #ffffff !important;
+}
+
+/* Dark Hero Section Specifics */
+.api-hero h1,
+.api-hero p,
+.am-hero h1,
+.am-hero p,
+.hero-section h1,
+.hero-section p,
+.page-hero h1,
+.page-hero p {
+    color: #ffffff !important;
+}
+
+/* --- LIGHT THEMED PAGES (Dark Text) --- */
+.dt-page,
+.id-page,
+.consulting-page {
+    color: #1e293b !important;
+}
+
+/* Light Hero Section Specifics */
+.dt-hero h1,
+.id-hero h1,
+.consulting-hero h1,
+.dt-title,
+.id-title {
+    color: #0f172a !important;
+}
+
+.dt-hero p,
+.id-hero p,
+.consulting-hero p,
+.dt-subtitle,
+.id-subtitle {
+    color: #334155 !important;
+}
+
+/* --- COMPONENT SPECIFIC OVERRIDES --- */
+
+/* Badges should always have white text if they have a background */
+.id-badge,
+.dt-badge,
+.api-badge,
+.am-badge,
+.hero-badge,
+.category-badge {
+    color: #ffffff !important;
+}
+
+/* Ensure headings in dark sections are white */
+section[style*="background: #1e1b4b"],
+section[style*="background: #0f172a"],
+section[style*="background: #1e293b"],
+section[style*="background: #312e81"],
+section[style*="background: #450a0a"],
+section[style*="background: #064e3b"],
+section[style*="background: #164e63"],
+section[style*="background: #881337"],
+section[style*="background: #78350f"],
+section[style*="background: #92400e"],
+section[style*="background: #065f46"],
+.api-cta,
+.dt-cta,
+.consulting-cta,
+.am-cta {
+    color: #ffffff !important;
+}
+
+section[style*="background: #1e1b4b"] h2,
+section[style*="background: #0f172a"] h2,
+section[style*="background: #1e293b"] h2,
+section[style*="background: #312e81"] h2,
+section[style*="background: #450a0a"] h2,
+section[style*="background: #064e3b"] h2,
+section[style*="background: #164e63"] h2,
+section[style*="background: #881337"] h2,
+section[style*="background: #78350f"] h2,
+section[style*="background: #92400e"] h2,
+section[style*="background: #065f46"] h2,
+.api-cta h2,
+.dt-cta h2,
+.consulting-cta h2,
+.am-cta h2 {
+    color: #ffffff !important;
+}
+
+/* Navbar Dropdown Visibility */
+.dropdown-menu {
+    z-index: 1100 !important;
+}
+
+.dropdown-menu a {
+    color: #1e293b !important;
+    /* Dark text for white dropdown */
+}
+
+.dropdown-menu a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Footer Visibility Fix */
+.footer {
+    background: #f8fafc !important;
+    color: #1e293b !important;
+}
+
+.footer h4,
+.footer h5 {
+    color: #0f172a !important;
+}
+
+.footer p,
+.footer span,
+.footer li a,
+.footer .contact-item a {
+    color: #475569 !important;
+}
+
+.footer li a:hover,
+.footer .contact-item a:hover {
+    color: var(--primary-color) !important;
+}
+
+.footer-bottom {
+    background: #ffffff !important;
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    color: #64748b !important;
+}
+
+/* Button Text Visibility */
+.btn,
+.api-btn,
+.dt-btn,
+.btn-hero-primary,
+.btn-hero-secondary {
+    color: #ffffff !important;
+}
+
+.btn-cta-primary {
+    color: #0f172a !important;
+    /* Dark text for white button */
+}

@@ -1,0 +1,338 @@
+/* About Page Premium Styles */
+
+.about-page {
+    background: #fff;
+}
+
+.about-hero {
+    padding: 12rem 0 8rem;
+    background: #0f172a;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-bg-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9));
+}
+
+.about-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero .hero-title {
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.about-hero .hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+}
+
+.hero-keyword-loop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.keyword-animated {
+    color: var(--home-accent);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.hero-cta-group {
+    display: flex;
+    justify-content: center;
+}
+
+/* Mission Vision */
+.mission-vision-section {
+    padding: 8rem 0;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.mission-card,
+.vision-card {
+    background: #fff;
+    padding: 4rem;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--home-accent);
+    box-shadow: var(--shadow-2xl);
+}
+
+.card-icon-box {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.mission-vision-grid h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+}
+
+.mission-vision-grid p {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* Story Section */
+.about-story-section {
+    padding: 8rem 0;
+}
+
+.about-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.story-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #0f172a;
+}
+
+.story-content p {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.story-stats {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.story-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-val {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.stat-lab {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.stat-sep {
+    width: 1px;
+    height: 50px;
+    background: #cbd5e1;
+}
+
+/* Story Visual */
+.story-visual-container {
+    position: relative;
+}
+
+.story-image-wrapper {
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow-2xl);
+}
+
+.story-main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.story-image-wrapper:hover .story-main-image {
+    transform: scale(1.05);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--home-accent);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--shadow-xl);
+    animation: animate-up 1s ease-out;
+}
+
+.exp-num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.exp-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+}
+
+/* Values Section */
+.about-values-section {
+    padding: 8rem 0;
+    background: #0f172a;
+    color: #fff;
+}
+
+.values-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.values-header h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.values-header p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.value-card-premium {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 3rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.value-card-premium:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+    border-color: var(--home-accent);
+}
+
+.value-icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.value-card-premium h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.value-card-premium p {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+/* CTA */
+.about-cta-section {
+    padding: 8rem 0;
+}
+
+@media (max-width: 992px) {
+
+    .about-story-grid,
+    .values-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .story-stats {
+        justify-content: center;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-badge {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        margin-top: -2rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero .hero-title {
+        font-size: 2.5rem;
+    }
+}

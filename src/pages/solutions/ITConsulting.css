@@ -1,0 +1,137 @@
+/* IT Consulting Unique Styles */
+
+.consulting-hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.consulting-hero-image {
+    position: relative;
+}
+
+.experience-badge {
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow-xl);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    animation: icon-float 3s ease-in-out infinite;
+}
+
+.experience-badge .years {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.experience-badge .label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-medium);
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* Methodology */
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+/* Expert Profiles */
+.expert-card-large {
+    background: var(--home-dark);
+    padding: 5rem;
+    border-radius: 40px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.expert-card-large::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.1), transparent 70%);
+}
+
+.expert-info h3 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.expert-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+}
+
+.expert-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.expert-stat h4 {
+    font-size: 2rem;
+    color: var(--home-accent);
+    margin-bottom: 0.5rem;
+}
+
+.expert-stat p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0;
+}
+
+/* CTA */
+.consulting-cta-content {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    padding: 6rem 2rem;
+    border-radius: 40px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 86, 179, 0.2);
+}
+
+.consulting-cta-content h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.consulting-cta-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 992px) {
+    .consulting-hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-cta-group {
+        justify-content: center !important;
+    }
+
+    .expert-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

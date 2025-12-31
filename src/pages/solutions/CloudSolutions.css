@@ -1,0 +1,183 @@
+/* Cloud Solutions Unique Styles */
+
+.cloud-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.cloud-hero-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.floating-stats {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat-pill {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    font-weight: 700;
+    color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    font-size: 0.875rem;
+}
+
+/* Ecosystem */
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.logo-box {
+    padding: 1.5rem 3rem;
+    background: #fff;
+    border-radius: 16px;
+    font-weight: 800;
+    color: var(--text-medium);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.logo-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Feature Rows */
+.feature-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    margin-bottom: 8rem;
+}
+
+.feature-row.reverse {
+    direction: rtl;
+}
+
+.feature-row.reverse .feature-row-text {
+    direction: ltr;
+}
+
+.feature-row-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefits-list-simple {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.benefits-list-simple li {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.benefits-list-simple li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--home-success);
+    font-weight: 900;
+}
+
+.feature-row-visual {
+    height: 400px;
+    background: var(--bg-light);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.visual-box.migration {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+}
+
+.visual-box.security {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+/* CTA Content */
+.cloud-cta-content {
+    background: var(--primary-color);
+    padding: 6rem 2rem;
+    border-radius: 40px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 86, 179, 0.2);
+}
+
+.cloud-cta-content h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cloud-cta-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 992px) {
+
+    .cloud-hero-grid,
+    .feature-row {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+
+    .feature-row.reverse {
+        direction: ltr;
+    }
+
+    .hero-cta-group {
+        justify-content: center !important;
+    }
+}

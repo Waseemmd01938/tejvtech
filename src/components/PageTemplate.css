@@ -1,0 +1,394 @@
+/* =========================================
+   PAGE TEMPLATE - Premium Design System
+   (Follows Home.jsx Design Authority)
+   ========================================= */
+
+:root {
+    --page-accent: var(--home-accent, #6366f1);
+    --page-accent-glow: var(--home-accent-glow, rgba(99, 102, 241, 0.4));
+    --page-glass: var(--home-glass, rgba(255, 255, 255, 0.08));
+    --page-glass-border: var(--home-glass-border, rgba(255, 255, 255, 0.12));
+}
+
+.page-template {
+    width: 100%;
+    overflow-x: hidden;
+    background: var(--bg-white);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.page-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 10rem 0 6rem;
+    overflow: hidden;
+    background-color: var(--home-dark, #0a0f1c);
+}
+
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.page-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(10, 15, 28, 0.8) 0%, rgba(10, 15, 28, 0.95) 100%);
+    z-index: 1;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1.25rem;
+    background: var(--page-glass);
+    border: 1px solid var(--page-glass-border);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    font-size: 0.875rem;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #fff;
+}
+
+.breadcrumb span {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumb .current {
+    color: var(--page-accent);
+    font-weight: 600;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--page-accent) 0%, #8b5cf6 100%);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease-out 0.1s backwards;
+}
+
+.page-hero-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    animation: fadeInUp 0.8s ease-out 0.3s backwards;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+/* =========================================
+   OVERVIEW SECTION
+   ========================================= */
+.page-overview {
+    padding: 8rem 0;
+    background: var(--bg-white);
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.overview-content h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.overview-content p {
+    font-size: 1.125rem;
+    color: var(--text-medium);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.benefits-list h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.benefits-list ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: 12px;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: transform 0.3s ease;
+}
+
+.benefits-list li:hover {
+    transform: translateX(5px);
+}
+
+.benefits-list li svg {
+    color: var(--home-success, #10b981);
+    flex-shrink: 0;
+}
+
+.sidebar-cta {
+    padding: 3rem;
+    background: var(--home-dark, #0a0f1c);
+    border-radius: 24px;
+    color: #fff;
+    position: sticky;
+    top: 100px;
+    overflow: hidden;
+}
+
+.sidebar-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--page-accent-glow) 0%, transparent 70%);
+    opacity: 0.5;
+}
+
+.sidebar-cta h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.sidebar-cta p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* =========================================
+   FEATURES SECTION
+   ========================================= */
+.page-features {
+    padding: 8rem 0;
+    background: var(--bg-light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--page-accent), #8b5cf6);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border-color: var(--page-accent);
+}
+
+.feature-card:hover::after {
+    transform: scaleX(1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    animation: icon-float 3s ease-in-out infinite;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-medium);
+    line-height: 1.7;
+}
+
+/* =========================================
+   TECH SECTION
+   ========================================= */
+.page-tech {
+    padding: 8rem 0;
+    background: #fff;
+    text-align: center;
+}
+
+.tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.tech-pill {
+    padding: 0.75rem 1.75rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.tech-pill:hover {
+    background: var(--page-accent);
+    color: #fff;
+    border-color: var(--page-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px var(--page-accent-glow);
+}
+
+/* =========================================
+   FINAL CTA
+   ========================================= */
+.page-final-cta {
+    padding: 8rem 0;
+    background: var(--home-dark, #0a0f1c);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-box h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.cta-box p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 3rem;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .sidebar-cta {
+        position: static;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 8rem 0 4rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .btn-primary-light,
+    .btn-outline-light {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .benefits-list ul {
+        grid-template-columns: 1fr;
+    }
+}
