@@ -1,0 +1,34 @@
+# tejvtech robots.txt
+# Robots.txt file for search engine crawlers
+# Place this file in the public/ directory
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://tejvtech.com/sitemap.xml
+Sitemap: https://tejvtech.com/sitemap-blog.xml
+
+# Block bad bots (optional)
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Disallow: /
